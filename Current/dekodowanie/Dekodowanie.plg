@@ -35,3 +35,5 @@ linking...
 .\Dekodowanie.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
 ".\Dekodowanie.axf" - 4 Errors, 3 Warning(s).
 Target not created
+Clean started: Project: 'Dekodowanie'
+   deleting intermediate output files for target 'Target 1'
