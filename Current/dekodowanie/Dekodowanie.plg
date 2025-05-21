@@ -3,7 +3,35 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\Admin\Desktop\dekodowanie\Dekodowanie.uvproj
-Project File Date:  05/20/2025
+C:\Users\Admin\Desktop\ppsw\Current\dekodowanie\Dekodowanie.uvproj
+Project File Date:  05/21/2025
 
 <h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling Dekodowanie.c...
+dekod.h(5): warning:  #1-D: last line of file ends without a newline
+konwersje.h(12): warning:  #1-D: last line of file ends without a newline
+Dekodowanie.c(173): warning:  #1-D: last line of file ends without a newline
+linking...
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol ReplaceCharactersInString (referred from dekodowanie.o).
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol eCompareString (referred from dekodowanie.o).
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol eHexStringToUInt (referred from dekodowanie.o).
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\Dekodowanie.axf" - 4 Errors, 3 Warning(s).
+Target not created
+Clean started: Project: 'Dekodowanie'
+   deleting intermediate output files for target 'Target 1'
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling Dekodowanie.c...
+dekod.h(5): warning:  #1-D: last line of file ends without a newline
+konwersje.h(12): warning:  #1-D: last line of file ends without a newline
+Dekodowanie.c(173): warning:  #1-D: last line of file ends without a newline
+linking...
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol ReplaceCharactersInString (referred from dekodowanie.o).
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol eCompareString (referred from dekodowanie.o).
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol eHexStringToUInt (referred from dekodowanie.o).
+.\Dekodowanie.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\Dekodowanie.axf" - 4 Errors, 3 Warning(s).
+Target not created
