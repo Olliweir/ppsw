@@ -402,6 +402,26 @@
               <FileType>1</FileType>
               <FilePath>.\Dekodowanie.c</FilePath>
             </File>
+            <File>
+              <FileName>konwersje.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\konwersje.c</FilePath>
+            </File>
+            <File>
+              <FileName>dekod.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\dekod.h</FilePath>
+            </File>
+            <File>
+              <FileName>konwersje.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\konwersje.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
