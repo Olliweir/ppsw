@@ -1,5 +1,5 @@
 #include <LPC21xx.H>
-
+#include "dekod.h"
 #include "konwersje.h"
 
 #define MAX_TOKEN_NR 3 //MAKS ILOSC TOKENOW
@@ -158,24 +158,6 @@ void DecodeMsg(char *pcString) {
  
  
  
-		 int main() {
-			 
-			 
-			 char test1[]="      ";
-			 unsigned char count1 = ucFindTokensInString(test1);
-			 
-			 
-			 char test2[]="   load store";
-			 unsigned char count2 = ucFindTokensInString(test2);
-			 
-			 char test3[]="reset load store";
-			 unsigned char count3 = ucFindTokensInString(test3);
-			 
-			 
-			 while(1);
-		 
-		 
-}
 
 		 
 		 
