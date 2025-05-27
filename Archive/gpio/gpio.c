@@ -1,5 +1,4 @@
 #include <LPC21xx.H>
- 
 
 #define LED0_bm 0x10000  
 #define LED1_bm 0x20000  
@@ -23,7 +22,7 @@ void Delay(int iMilliSec) {
 
 
 void LedInit() {
-    IO1DIR |= (LED0_bm | LED1_bm | LED2_bm | LED3_bm);
+    IO1DIR |= LED0_bm | LED1_bm | LED2_bm | LED3_bm;
     IO1CLR = LED0_bm | LED1_bm | LED2_bm | LED3_bm;
     IO1SET = LED0_bm;
 }
@@ -54,13 +53,13 @@ enum KeyboardState { RELEASED, BUTTON_0, BUTTON_1, BUTTON_2, BUTTON_3 };
 
 
 enum KeyboardState eKeyboardRead() {
-    if (!(IO0PIN & S0_bm)) {
+    if ((!(IO0PIN & S0_bm))==0) {
         return BUTTON_0;
-    } else if (!(IO0PIN & S1_bm)) {
+    } else if ((IO0PIN & S1_bm) == 0) { // 0x0000 wcisniety //0x0040 puszczony
         return BUTTON_1;
-    } else if (!(IO0PIN & S2_bm)) {
+    } else if ((IO0PIN & S2_bm) == 0) {//0x0000 //0x0020
         return BUTTON_2;
-    } else if (!(IO0PIN & S3_bm)) {
+    } else if ((IO0PIN & S3_bm) == 0) {
         return BUTTON_3;
     }
     return RELEASED;
@@ -96,20 +95,11 @@ void LedStepLeft(){
 
 
 int main() {
-	LedInit();
-	KeyboardInit();
-	
 	while(1){
-			Delay(500);
-		switch (eKeyboardRead()){
-			case BUTTON_1:
-				LedStepRight();
-			break;
-			case BUTTON_2:
-				LedStepLeft();
-			break;
-			default:
-				break;
-		}
+	
+	LedInit();
+	
 	}
+	
+	
 }
