@@ -17,7 +17,7 @@ typedef union { // pola dziela te same miejsce, wspolna i mniejsz pamiec, przech
 	char *           pcString;
 }TokenValue;
 
-typedef struct { // wszystkie pola maja wlasne mijesce w pamieci, laczy rozne zmienne w jedna calosc, grupowanie danych roznych typow razem
+typedef struct { // wszystkie pola maja wlasne miejsce w pamieci, laczy rozne zmienne w jedna calosc, grupowanie danych roznych typow razem
 	TokenType eType;
 	TokenValue uValue;
 }Token;
@@ -104,7 +104,7 @@ void DecodeTokens(void){
   for(ucTokenCounter = 0; ucTokenCounter < ucTokenNr; ucTokenCounter++){ //Iteruje po tokenach w tablicy asToken (do ucTokenNr).
 	
 		psCurrentToken = &asToken[ucTokenCounter];
-		pcString = psCurrentToken->uValue.pcString;//Pobiera wskaznik na lancuch tokenu
+		pcString = psCurrentToken->uValue.pcString;// -> wybranie skladnika, Pobiera wskaznik na lancuch tokenu
 		
 		if(OK == eStringToKeyword(pcString, &psCurrentToken->uValue.eKeyword)) { //Sprawdza, czy lancuch jest slowem kluczowym (reset, load, store).
 			psCurrentToken->eType = KEYWORD;
