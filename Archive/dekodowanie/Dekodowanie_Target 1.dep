@@ -1,7 +1,7 @@
 Dependencies for Project 'Dekodowanie', Target 'Target 1': (DO NOT MODIFY !)
-F (.\Startup.s)(0x51C81B7E)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
-F (.\Dekodowanie.c)(0x683C82E2)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\dekodowanie.o --omf_browse .\dekodowanie.crf --depend .\dekodowanie.d)
-F (.\konwersje.c)(0x68361E7B)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\konwersje.o --omf_browse .\konwersje.crf --depend .\konwersje.d)
-F (.\dekod.h)(0x68361E7B)()
-F (.\konwersje.h)(0x68361E7B)()
-F (.\main.c)(0x6836395F)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+F (.\Startup.s)(0x683DC58F)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\Dekodowanie.c)(0x683DC58F)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\dekodowanie.o --omf_browse .\dekodowanie.crf --depend .\dekodowanie.d)
+F (.\konwersje.c)(0x683DC58F)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\konwersje.o --omf_browse .\konwersje.crf --depend .\konwersje.d)
+F (.\dekod.h)(0x683DC58F)()
+F (.\konwersje.h)(0x683DC58F)()
+F (.\main.c)(0x683DC58F)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
