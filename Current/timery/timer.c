@@ -6,7 +6,7 @@
 
 #define Reset_On_MR0_bm (1 << 1) 
 #define Interupt_On_MR0_bm (1 << 0)
-#define MR0_Interupt_Flag_bm (1 << 0 )
+#define MR0_Interupt_Flag_bm (1 << 0)
 
 void InitTimer0(void){
 	T0TCR = Counter0_Enable_bm;
@@ -34,7 +34,6 @@ void WaitOnTimer0Match0(void){
 	while(0 ==(T0IR & MR0_Interupt_Flag_bm)){}
 		T0IR |= MR0_Interupt_Flag_bm; // reset flagi przerwania zapis(1 do bitu 0 w T0IR) 
 }
-
 
 
 
