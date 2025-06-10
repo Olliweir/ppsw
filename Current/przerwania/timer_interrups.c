@@ -22,7 +22,6 @@
 void (*ptrTimer0InterruptFunction)(void); // Globalny wskaznik na funkcje, która bedzie wywolywana w przerwaniu
 
 //(Interrupt Service Routine) of Timer 0 interrupt
-// __irq oznacza, ze jest to ISR; kompilator generuje odpowiedni kod wejscia/wyjscia dla trybu IRQ
 //Jest to procedura obslugi przerwania (ISR – Interrupt Service Routine), która automatycznie wykonuje sie, gdy Timer 0 zglosi przerwanie
 //Ta funkcja dziala jako "most" miedzy sprzetem (Timer 0 i VIC) a oprogramowaniem (funkcja uzytkownika)
 
@@ -47,7 +46,7 @@ void Timer0Interrupts_Init(unsigned int uiPeriod,void(*ptrInterruptFunction)(voi
         // moduly porownan 
 
 	T0MR0 = 15 * uiPeriod;                 	      // value 15 000 cykli = 1 ms przy PCLK=15 MHz
-	T0MCR |= (mINTERRUPT_ON_MR0 | mRESET_ON_MR0); // action przerwanie i reset na MR0
+	T0MCR |= (mINTERRUPT_ON_MR0 | mRESET_ON_MR0); // action przerwanie i reset na MR0 str 218
 
         // timer
 	T0TCR |=  mCOUNTER_ENABLE; //timer start 
@@ -58,4 +57,20 @@ void Timer0Interrupts_Init(unsigned int uiPeriod,void(*ptrInterruptFunction)(voi
 
 
 //Timer0Interrupts_Init konfiguruje procedure przerwania dla timer 0, wlacz slot i okresla zrodlo przeerwania
-	// okresla priorytet flagi przerwania przypisuje slot 0 do 15 ustawia dla jakiej wartosci timer 0 nastepuje przerwanie
+	// okresla priorytet flagi przerwania przypisuje slot 0 do 15, ustawia dla jakiej wartosci timer 0 nastepuje przerwanie
+	/*
+Wejscie (IntEnable): Na poczatku VIC ma uklad, który pozwala wlaczac lub wylaczac przerwania z poszczególnych kanalów (1-wlaczone 0-wylaczone)
+Sloty (VectorInterrupt0-15): VIC ma 16 "slotów" – to takie miejsca, gdzie mozna przypisac konkretne przerwania i powiedziec, co z nimi robic
+	Kazdy slot ma:
+	Bit Enable (w rejestrze VectorCtl): Wlacza lub wylacza slot - 5 bit
+	Bity Source (tez w VectorCtl): Okreslaja, który kanal (od 0 do 31) ten slot obsluguje.
+	Adres procedury (VectorAddr): Miejsce, gdzie zapisany jest adres programu (ISR), który ma sie uruchomic, gdy przerwanie z tego kanalu sie pojawi, inaczej priorytet.
+	
+	Przyklad:
+		1.Jakies zródlo (np. TIMER0 na kanale 4) wywoluje przerwanie.
+		2.VIC sprawdza, czy kanal 4 jest wlaczony w IntEnable.
+		3.Szuka wsród 16 slotów, czy którys jest przypisany do kanalu 4 i wlaczony.
+		4.Jesli znajdzie (np. slot 5), bierze adres ISR z rejestru VectorAddr5.
+		5.Mikrokontroler przerywa swoje zadanie i uruchamia ten ISR.
+
+*/
